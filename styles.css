@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0f0f27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+.main-section{
+    width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
+   
+}
+.main-section h2{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.main-section h1{
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+main{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px #3C40C6;
+}
+
+main p{
+    display: block;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 18px;
+}
+main input{
+    width: 70%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #3C40C6;
+}
+main button{
+    background-color: #3C40C6;
+    padding: 8px 25px;
+    border-radius: 10px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.palindrome{
+    width: 100%;
+    background-color: #036323;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 15px 10px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: semibold;
+}
+
+#result{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
