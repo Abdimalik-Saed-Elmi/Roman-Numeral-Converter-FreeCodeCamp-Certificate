@@ -26,6 +26,7 @@ body{
 .main-section h2{
     margin-bottom: 20px;
     font-size: 35px;
+    font-weight: 500;
 }
 .main-section h1{
     margin-bottom: 20px;
@@ -33,50 +34,54 @@ body{
 }
 main{
     width: 100%;
-    background-color: white;
+    background-color: #535C68;
     text-align: center;
-    padding: 15px 10px;
-    border-radius: 10px;
+    padding: 25px 35px;
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 8px #3C40C6;
 }
 
 main p{
     display: block;
-    margin-bottom: 30px;
-    color: black;
-    font-size: 18px;
-}
-main input{
-    width: 70%;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #3C40C6;
-}
-main button{
-    background-color: #3C40C6;
-    padding: 8px 25px;
-    border-radius: 10px;
-    margin-left: 5px;
+    margin: 10px 0;
     color: white;
+    font-size: 25px;
     font-weight: bold;
 }
-
-.palindrome{
+main input{
     width: 100%;
-    background-color: #036323;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #021217;
+    color: white;
+    font-size: 30px;
+}
+main button{
+    background-color: #fcb722;
+    margin: 10px 0;
+    color: black;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 30px;
+}
+
+.outputChanger{
+    width: 100%;
+    background-color: #fb98a1;
+    color: black;
     margin-top: 20px;
-    border-radius: 10px;
     padding: 15px 10px;
     font-size: 28px;
     text-align: center;
     font-weight: semibold;
+    border: 2px solid red;
 }
 
-#result{
+/* #output{
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 20px;
-}
+} */
