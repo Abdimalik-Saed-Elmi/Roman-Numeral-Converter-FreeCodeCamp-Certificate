@@ -62,12 +62,12 @@ main button{
     background-color: #fcb722;
     margin: 10px 0;
     color: black;
-    width: 100%;
+    width: 40%;
     padding: 10px 10px;
     font-size: 30px;
 }
 
-.outputChanger{
+/* .outputChanger{
     width: 100%;
     background-color: #fb98a1;
     color: black;
@@ -77,11 +77,12 @@ main button{
     text-align: center;
     font-weight: semibold;
     border: 2px solid red;
-}
+} */
 
-/* #output{
-    color: black;
+main #results-div{
+    color: white;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 20px;
-} */
+    font-size: 25px;
+    font-weight: bold;
+}
