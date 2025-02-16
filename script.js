@@ -1,33 +1,46 @@
-const userInput = document.getElementById("user-input")
-const Checkbtn = document.getElementById("check-btn")
-const Clearbtn = document.getElementById("clear-btn")
-const result = document.getElementById("results-div")
+const Textinput = document.getElementById("number")
+const Checkbtn = document.getElementById("convert-btn")
+const result = document.getElementById("output")
 
-function Checknumber(){
-    const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
-    const inputData  = userInput.value
-    if(inputData === ''){
-        alert("Please provide a phone number")
+
+
+Checkbtn.addEventListener('click', ()=>{
+    const inputValue = +Textinput.value
+    if (!inputValue) {
+        result.classList.add("outputChanger")
+       result.innerText = 'Please enter a valid number'
+  
         return
     }
-    let item = document.createElement("li")
-    result.appendChild(item)
-    if(regex.test(userInput.value)){
-         item.innerHTML = "Valid US number: " + inputData
-         userInput.value = ""
+    if (inputValue < 0) {
+        result.classList.add("outputChanger")
+       result.innerText = 'Please enter a number greater than or equal to 1'
+  
+        return
     }
-    else{
-        item.innerHTML = "Invalid US number: " + inputData
-        inputData = ""
+    if(inputValue >= 4000){
+        result.classList.add("outputChanger")
+        result.innerText = "Please enter a number less than or equal to 3999"
+        return
     }
-}
 
-
-Clearbtn.addEventListener("click", ()=>{
-    result.innerHTML = "";
-    return
+    const lastResult = ConvertNumToRoman(inputValue)
+    result.classList.add("outputChanger")
+    result.innerText = lastResult
 })
 
-Checkbtn.addEventListener('click', Checknumber)
-  
+
+function ConvertNumToRoman(num){
+    const val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    const syms = ["M","CM", "D","CD","C","XC", "L", "XL","X","IX", "V", "IV", "I"]
+    let Roman = '';
+    let i = 0
+    while (num > 0) {
+        const div = Math.floor(num / val[i])
+        num -= div * val[i]
+        Roman += syms[i].repeat(div)
+        i++
+    }
+    return Roman;
+}   
 
